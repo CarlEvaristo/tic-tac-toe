@@ -36,14 +36,37 @@ main{
 }
 .gameBoard {
     display:grid;
-    grid-template: 100px 100px 100px / 100px 100px 100px;
+    grid-template: 150px 150px 150px / 150px 150px 150px;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     border-radius: 10px;
     overflow: hidden;
 }
-/* button {
+button{
+    font-family: 'Roboto', sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+}
+button:hover{
+    background-color: rgb(255, 217, 0);
     border:none;
-} */
+}
+button:active{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.newGameBtn {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    padding: 1em 1.5em;
+    border: none;
+    margin-top: 1em;
+}
+.newGameBtn:hover{
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+.newGameBtn:active{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
 
 @media(max-width: 600px) {
     main{

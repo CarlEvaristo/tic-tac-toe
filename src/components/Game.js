@@ -6,6 +6,12 @@ function Game() {
     const [squares, setSquares] = React.useState([0, 0, 0, 0, 0, 0, 0, 0, 0])
     const [player1Turn, setPlayer1Turn] = React.useState(true)
 
+    function newGame(){
+        setSquares([0, 0, 0, 0, 0, 0, 0, 0, 0])
+        setGameWon(false)
+        setPlayer1Turn(true)
+    }
+
     React.useEffect(() => {
         let horStart = [0,3,6]
         let vertStart = [0,1,2]
@@ -48,6 +54,7 @@ function Game() {
         <div className="game">  
             <h1>{gameWon ? `Player ${player1Turn ? 1 : 2} wins` : player1Turn ? "Player 2 turn:" : "Player 1 turn:"}</h1>
             <Board handleClick={handleClick} squares={squares} gameWon={gameWon} />
+            {gameWon && <button onClick={newGame} className="newGameBtn">New Game</button>}
         </div>
     )   
 }
