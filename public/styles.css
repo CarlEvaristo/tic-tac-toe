@@ -28,6 +28,16 @@ main{
     width:500px;
     aspect-ratio: 1;
 }
+.gameBoard {
+    display:grid;
+    grid-template: 100px 100px 100px / 100px 100px 100px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+/* button {
+    border:none;
+} */
 
 @media(max-width: 600px) {
     main{
