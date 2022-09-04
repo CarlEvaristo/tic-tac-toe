@@ -33,9 +33,6 @@ function Game() {
 
     }, [squares])
 
-    React.useEffect(() => {
-        gameWon !== false && console.log("Player", player1Turn ? 1 : 2, "wins")
-    }, [gameWon])
 
     function handleClick(id) {
         setSquares(prev => (prev.map((square, index) => {
@@ -48,7 +45,10 @@ function Game() {
     }
     
     return (
-        <Board handleClick={handleClick} squares={squares} gameWon={gameWon} />
+        <div className="game">  
+            <h1>{gameWon ? `Player ${player1Turn ? 1 : 2} wins` : player1Turn ? "Player 2 turn:" : "Player 1 turn:"}</h1>
+            <Board handleClick={handleClick} squares={squares} gameWon={gameWon} />
+        </div>
     )   
 }
 

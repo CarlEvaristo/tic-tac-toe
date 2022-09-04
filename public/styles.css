@@ -27,6 +27,12 @@ main{
     background-color: #fff;
     width:500px;
     aspect-ratio: 1;
+}    
+.game{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .gameBoard {
     display:grid;
