@@ -18,10 +18,19 @@ body{
     height:100vh;
     display:flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 h1{
-    font-size: 2rem;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 5rem;
+    font-weight: 400;
+    color:#fff;
+    margin-bottom:0.5em;
+    text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+h2{
+    margin:0;
+    font-size: 3rem;
 }
 main{
     background-color: #fff;
@@ -29,26 +38,28 @@ main{
     aspect-ratio: 1;
 }    
 .game{
+    padding:0;
     display:flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 .gameBoard {
+    padding:0;
     display:grid;
     grid-template: 150px 150px 150px / 150px 150px 150px;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-    border-radius: 10px;
+    gap: 10px;
     overflow: hidden;
+    padding: 10px;
 }
 button{
     font-family: 'Roboto', sans-serif;
-    font-size: 5rem;
+    font-size: 9rem;
     font-weight: 700;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 button:hover{
-    background-color: rgb(255, 217, 0);
-    border:none;
+    background-color: rgb(231, 76, 255);
 }
 button:active{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
@@ -58,7 +69,8 @@ button:active{
     font-size: 2rem;
     padding: 1em 1.5em;
     border: none;
-    margin-top: 1em;
+    margin-top: 0;
+    border-radius: 8px;
 }
 .newGameBtn:hover{
     background-color: #fff;
@@ -72,4 +84,18 @@ button:active{
     main{
         width:90%;
     }
+    .gameBoard {
+        padding:0;
+        display:grid;
+        grid-template: 130px 130px 130px / 130px 130px 130px;
+        gap: 10px;
+        padding: 10px;
+    }
+    h2{
+        margin-bottom: 1em;  
+    }
+    .newGameBtn {
+        margin-top: 1em;
+    }
 }
+
